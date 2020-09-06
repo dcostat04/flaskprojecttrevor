@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title> mix usage </title>
+    <style>
+        
+  
+  canvas{
+    width : 200pt;
+    height : 100pt;
+    border : 1px solid;
+  }
+    </style>
+  </head>
+  
+<body>
+  <h1> 
+     This is Trevor Aaron Robert Dcosta 
+  </h1>
+  
+  <p> I am a RB in my department football team  </p>
+ <p>I also can play at CB and DMF also </p>
+  
+    <h1>The top 3 players in football :-</h1>
+ </div>
+   
+      <h2> Lionel Messi </h2>
+      <h2> Cristiano Ronaldo </h2>
+      <h2> Kylian Mbappe </h2>
+   
+      
+
+
+  <h1> Canvas Practice </h1>
+  <canvas id="can1">
+    </canvas>
+  <input type="button" value="make lime"
+         onclick="canvascolor()"/>
+  <input type="button" value="draw rect" onclick="canvascolor2()"/>
+  <input type="color" value="#FF0000" id="clr" onchange="doColor()" >
+  <h2> Slider </h2>
+  <canvas id="can2">
+  </canvas>
+   <input type="color" value="#FF0000" id="clr1" onchange="doColor2()" >
+  <input type="range" min="10" max="100" value="10" id="sld" oninput="dosquare()"/>
+<script>
+   function dochange(){
+    alert("just checking what's a button");
+  }
+  function changecolor(){
+  var ediv1 = document.getElementById("div1");
+  ediv1.className = "bluejazz";
+  }
+  function changetext(){
+    var ediv2 = document.getElementById("div2");
+    ediv2.innerHTML= "He also likes football.Some of the best footballers are: 1.Messi  2.Ineasta "
+  }
+  function  canvascolor(){
+    var canvas1= document.getElementById("can1");
+    canvas1.style.backgroundColor="lime";
+    }
+  function canvascolor2(){
+    var canvas2= document.getElementById("can1");
+    canvas2.style.backgroundColor= "white";
+    var cxt= canvas2.getContext("2d");
+    cxt.fillStyle="red";
+    cxt.fillRect(100,50,100,100);
+    cxt.fillStyle="black";
+    cxt.font= "25px Arial";
+    cxt.fillText("Hello",15,25);
+  }
+  function doColor() {
+    var canvas = document.getElementById("can1");
+    var colorinput = document.getElementById("clr");
+    canvas.style.backgroundColor = colorinput.value;
+  }
+  function doColor2() {
+    var canvas = document.getElementById("can2");
+    var colorinput = document.getElementById("clr1");
+    canvas.style.backgroundColor = colorinput.value;
+  }
+  function dosquare(){
+    var sliderinput = document.getElementById("sld");
+    var len = sliderinput.value;
+    var canvas = document.getElementById("can2");
+    var context = canvas.getContext("2d");
+    context.clearRect(0,0,canvas.width,canvas.height);
+    context.fillStyle = "yellow";
+    context.fillRect(10,10,len,len);
+  } 
+</script>
+</body>
+</html>
