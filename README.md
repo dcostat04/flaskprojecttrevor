@@ -1,1 +1,1 @@
-# Trevor Aaron Robert Dcosta project for flask basic
+# Trevor Aaron Robert Dcosta project for using flask app basics
